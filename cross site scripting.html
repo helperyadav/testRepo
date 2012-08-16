@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<style>
+	body{
+		font-size: 14px;
+		font-family: Serif,vardana;
+	}
+	.puzzle{
+		border:1px solid gray;
+		border-radius:10%;
+		box-shadow:0px -10px 10px;
+		
+		display:inline-block;
+		margin-top:20px;
+		margin-bottom:20px;
+		margin-left : 20px;
+		padding-top : 20px;
+		padding-bottom : 20px;
+		padding-left:5px;
+		padding-right:5px;
+
+		background-color: gray;
+	
+	}
+	.puzzle .option{	
+		border-radius:5px;
+		box-shadow:0px 3px 10px black;
+		margin-bottom:20px;
+		height:30px;
+
+		background: white;
+		color: black;
+		
+		
+	}
+
+	.puzzle .option:hover{
+		border-radius:5px;
+		box-shadow: 0px 5px 10px black;
+		text-shadow: 0px 5px 11px black;
+		font-size:1.2em;
+		
+	}
+	
+	.puzzle img{	
+		border:1px solid gray;
+		margin: 5px;
+		padding:5px;
+	}
+	
+
+	.puzzle .HintMsg{
+		border-bottom:1px solid black;
+		border-radius:5px;
+		box-shadow: 0px 3px 5px;
+
+		margin:5px;
+		
+		font-weight:bold;
+		
+		
+	}
+	.arrow{
+		width: 0px
+		height: 0px;
+		border-color: red blue green yellow; /*top, right, bottom, and left border*/
+		border-style: solid;
+		border-width: 50px;
+		display:inline-block;	
+}
+	#fade-example{
+		text-align: center;
+		margin:auto;
+		background-color: #C1D1F7;
+		border: 5px solid white;
+		
+}
+</style>
+<link href="./css/basic-jquery-slider.css" rel="stylesheet" type="text/css">
+
+<script src="./js/libs/jquery-1.6.2.min.js"> </script>
+<script src="./js/basic-jquery-slider.js"> </script>
+<script>
+$(document).ready(function(){
+	$("#fade-example").bjqs({
+		'height' : 510,
+		'width' : 700,
+		'animationDuration' : 200,
+		'showMarkers' : true,
+		'centerControls' :true,
+		'nextText': '<i>Next</i>',
+		'prevText': '<i> Prev</i>',
+		'useCaptions' : false,
+		'keyboardNav' : true,
+		'animation': 'slide',
+		 showMarkers: false,
+		
+	});
+
+});
+</script>
+</head>
+	<body> 
+
+<div class="head"> <h1> Brain works </h1>   </div>
+
+<div class="leftPane" style="float:left;width:300px;"> hello </div>
+
+<div style="width: 700px;margin: auto;position: relative;">
+	<div id="fade-example" >
+	<ul class="bjqs">
+		<li >
+			<div class="puzzle">
+		<div class="HintMsg"> Guess Brand </div>
+		<img src="./images/jaguar.jpg"> </img>
+		<div class="option1 option" > Toyota  </div>
+		<div class="option2 option" > Jaguar  </div>
+		<div class="option3 option" > Motorola  </div>
+		<div class="option4 option" > Ford  </div>
+		</div>
+
+
+		</li>
+		
+		<li >
+
+			<div class="puzzle">
+		<div class="HintMsg"> Guess Brand </div>
+		<img src="./images/audi.jpg"> </img>
+		<div class="option1 option" > Toyota  </div>
+		<div class="option2 option" > Jaguar  </div>
+		<div class="option3 option" > Motorola  </div>
+		<div class="option4 option" > Audi  </div>
+	</div>
+		</li>
+					
+	</ul>
+	</div>
+</div>
+
+	</body>
+</html>
